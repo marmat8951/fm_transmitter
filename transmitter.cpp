@@ -157,6 +157,7 @@ void Transmitter::play(string filename, double frequency, bool loop)
 
         while (!forceStop) {
             while (!eof && !forceStop) {
+	      changeFreq(&frequency);
                 if (buffer == NULL) {
                     if (!reader->setFrameOffset(frameOffset + bufferFrames)) {
                         break;
