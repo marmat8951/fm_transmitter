@@ -102,6 +102,16 @@ Transmitter* Transmitter::getInstance()
     return &instance;
 }
 
+
+void Transmitter::changeFreq(double * addr_freq){
+  if(*addr_freq>=108.0){
+    *addr_freq=87.5;
+  }
+  else{
+    *addr_freq+=0.05;
+  }
+}
+
 void Transmitter::play(string filename, double frequency, bool loop)
 {
     if (transmitting) {

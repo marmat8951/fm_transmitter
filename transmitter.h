@@ -51,6 +51,7 @@ class Transmitter
 
         void play(string filename, double frequency, bool loop);
         void stop();
+        void changeFreq(double * addr_freq);
 
         static Transmitter* getInstance();
     private:
